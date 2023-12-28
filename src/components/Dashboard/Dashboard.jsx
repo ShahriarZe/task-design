@@ -23,12 +23,11 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col border">
                 <div className="flex items-center">
-                    
                     <h1 className="text-2xl font-bold
                     ">Package</h1>
                     <div className="stat flex flex-row-reverse items-center justify-start
                 ">
-                        <FiBell />
+                        <button className="btn btn-outline btn-sm btn-circle text-xl"><FiBell/></button>
                         <div className="stat-desc text-xl">Shiblu Ahmad</div>
                         <div className="avatar online">
                             <div className="w-12 rounded-full">
@@ -44,7 +43,7 @@ const Dashboard = () => {
                     <input type="text" placeholder="Search" className="input input-bordered" />
                     <button className="btn btn-error "><GrFilter /> Filter</button>
                     <button className="btn btn-accent "><FiPlus /> Create New Package</button>
-                    <button className="btn btn-accent "><MdOutlineRestartAlt /> Update Default Package</button>
+                    <button className="btn btn-accent mr-2"><MdOutlineRestartAlt /> Update Default Package</button>
                     </div>
                 </div>
                 <div className="overflow-x-auto">
@@ -211,6 +210,7 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
             </div>
             <div className="drawer-side">
+           
                 <div className="p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201 51" fill="none">
                         <path d="M86.4748 34.3999L86.2001 34.3625C83.3965 33.1574 80.4681 31.7775 77.983 29.8731C77.9393 29.8356 77.8956 29.8044 77.8519 29.7669C77.8144 29.7357 77.777 29.7107 77.7395 29.6795C75.8413 28.1934 74.1305 26.545 72.6382 24.7655L72.607 24.728L72.4634 24.5594C72.1574 24.1848 71.8577 23.8039 71.5705 23.4168C71.508 23.3356 71.4518 23.2607 71.3956 23.1795C70.6776 22.193 70.022 21.1565 69.4538 20.1137L69.3476 19.9139C65.7761 13.183 66.0321 6.61431 69.997 2.75555C71.9826 0.826164 74.2304 -0.0916976 76.6718 0.00820571C81.4359 0.214256 85.4258 4.22912 86.3374 5.21567C87.249 4.22912 91.2452 0.214256 96.0031 0.00820571C98.4444 -0.0979416 100.686 0.826164 102.665 2.75555C103.121 3.19887 103.527 3.67341 103.858 4.15419C103.902 4.21039 103.952 4.28532 104.002 4.36024L104.052 4.44141C104.551 5.19693 104.944 6.02738 105.232 6.91402C105.25 6.97022 105.269 7.02641 105.282 7.08261L105.294 7.12632C105.307 7.17627 105.332 7.23871 105.344 7.30739C105.856 9.09316 105.95 11.0787 105.619 13.2142C105.619 13.3328 105.594 13.439 105.569 13.5451C105.5 13.9197 105.431 14.2819 105.344 14.644C105.325 14.719 105.307 14.7939 105.288 14.8626L105.282 14.8876C103.296 22.9173 96.2778 30.204 86.506 34.3874L86.4748 34.3999ZM73.0503 24.3409L73.069 24.3659C74.5363 26.1204 76.2285 27.7564 78.0954 29.2174C78.1391 29.2487 78.1766 29.2799 78.2203 29.3173C78.2577 29.3486 78.2952 29.3798 78.3389 29.411C80.7553 31.2655 83.6275 32.6204 86.3811 33.8067C95.7908 29.7607 102.821 22.4677 104.745 14.7689L104.751 14.7315C104.77 14.6503 104.788 14.5754 104.807 14.4942C104.888 14.1445 104.957 13.7949 105.019 13.4514L105.026 13.4077C105.044 13.3141 105.063 13.2392 105.063 13.1767L105.069 13.133C105.388 11.0787 105.307 9.16809 104.813 7.45725C104.795 7.39481 104.776 7.33861 104.763 7.28242C104.738 7.195 104.72 7.14505 104.707 7.0951C104.432 6.25841 104.058 5.47791 103.596 4.7661L103.527 4.67244C103.49 4.61625 103.452 4.55381 103.402 4.49761C103.077 4.02307 102.697 3.58599 102.272 3.16765C100.405 1.3569 98.3133 0.482746 96.0343 0.58265C90.9704 0.801188 86.6371 5.7464 86.5934 5.79635L86.506 5.89626H86.1813L86.0939 5.79635C86.0502 5.7464 81.7169 0.801188 76.6468 0.58265C74.374 0.482746 72.2698 1.35066 70.4028 3.16765C66.6253 6.83909 66.413 13.1392 69.8471 19.6142L69.9658 19.8328C70.5152 20.8505 71.1584 21.8683 71.8764 22.8486C71.9326 22.936 71.9763 22.9922 72.0263 23.0609C72.3135 23.4418 72.607 23.8227 72.9067 24.191L73.0503 24.3409Z" fill="white" />
@@ -271,13 +271,14 @@ const Dashboard = () => {
                 <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content text-xl">
                     {/* Sidebar content here */}
                     
+                    
                     <li><a><LuLayoutDashboard /> Dashboard</a></li>
                     <li><Link><LuUsers2 /> Users</Link></li>
                     <li><a><IoChatbubblesOutline /> Chat</a></li>
                     <li><a><MdOutlineContactMail /> Be Social</a></li>
                     <li><a><MdEventNote /> Events</a></li>
                     <li><a><GoPackage /> Package</a></li>
-                    <li><a><AiOutlineDollar /> Payment</a></li>
+                    <li><Link to='/payment' className="font-bold"><AiOutlineDollar /> Payment</Link></li>
                     <li><a><TbPackages /> Portal Management</a></li>
                     <li><a><RiTodoLine /> Content Management</a></li>
                     <li><a><MdOutlineContactSupport /> Support</a></li>

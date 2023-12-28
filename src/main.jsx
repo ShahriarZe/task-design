@@ -8,12 +8,24 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Dashboard from './components/Dashboard/Dashboard.jsx';
+import Routes from './Routes/Routes.jsx';
+import Payment from './components/Payment/Payment.jsx';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard></Dashboard>,
-    
+    element: <Routes></Routes>,
+    children:[
+      {
+        path:'/',
+        element:<Dashboard></Dashboard>
+      },
+      {
+        path:'/payment',
+        element:<Payment></Payment>
+      }
+    ]
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
